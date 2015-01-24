@@ -1,0 +1,1 @@
+/Users/marcperez/Sites/pendingmovies/app/views/movies/edit.blade.php
