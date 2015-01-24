@@ -1,5 +1,15 @@
 <?php
 
+
+/*
+|--------------------------------------------------------------------------
+| Load environment specific variables
+|--------------------------------------------------------------------------
+*/
+Dotenv::load(__DIR__ . '/../');
+Dotenv::required(array('ROOT_URL'));
+
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -24,11 +34,11 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment(function()
+{
+    return getenv('APP_ENV') ?: 'production';
+});
 
-	'local' => array('homestead'),
-
-));
 
 /*
 |--------------------------------------------------------------------------
