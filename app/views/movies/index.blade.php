@@ -7,8 +7,14 @@
 <div class="container movies-list" ng-controller="MoviesCtrl">
 	<div class="row">
 		<div class="col-sm-12">
-			<form action="">
-				<input type="text" class="search-box" placeholder="Add a movie...">
+			<form action="" method="POST">
+				<div class="input-group search-box">
+					<input type="text" name="title" class="form-control" placeholder="Add a movie...">
+					<span class="input-group-btn">
+	                      <button class="btn btn-default" type="submit">Add to list</button>
+	                </span>
+                </div>
+				
 			</form>
 		</div>
 	</div>
@@ -22,7 +28,7 @@
 		      <div class="caption">
 		        <h3>{{$movie->title}}</h3>
 		        <p>...</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		        <p><a href="#" class="btn btn-primary btn-xs" role="button">Watched</a> <a href="#" class="btn btn-danger btn-xs" role="button">Delete</a></p>
 		      </div>
 		    </div>
 		  </div>

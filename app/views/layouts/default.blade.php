@@ -27,13 +27,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Pending Movies</a>
+          <a class="navbar-brand" href="/">Pending Movies</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="{{ route('movies.index') }}">Pending</a></li>
-            <li><a href="#">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -41,8 +40,6 @@
 
     @yield('content')
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ asset('js/lib.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
