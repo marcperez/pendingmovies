@@ -1,4 +1,5 @@
 /public/js/lib
+/node_modules
 
 /bootstrap/compiled.php
 /vendor
