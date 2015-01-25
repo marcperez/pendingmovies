@@ -27,8 +27,8 @@
 		      <img src="http://cdn.collider.com/wp-content/uploads/boyhood-teaser-poster.jpg" alt="..." class="img-responsive">
 		      <div class="caption">
 		        <h3>{{$movie->title}}</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-primary btn-xs" role="button">Watched</a> <a href="#" class="btn btn-danger btn-xs" role="button">Delete</a></p>
+		        <p>{{$movie->plot}}</p>
+		        <p> <span class="label label-warning">{{$movie->imdbRating}}</span> <a href="#" class="btn btn-primary btn-xs" role="button">Watched</a> <a href="#" class="btn btn-danger btn-xs" role="button">Delete</a></p>
 		      </div>
 		    </div>
 		  </div>

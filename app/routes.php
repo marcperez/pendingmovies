@@ -17,10 +17,3 @@ Route::get('/', function()
 });
 
 Route::resource('movies', 'MoviesController');
-
-Route::get('movies/search/{movie_title}', function($movie_title) {
-	$client = new GuzzleHttp\Client();
-	$res = $client->get("http://www.omdbapi.com/?s=$movie_title&r=json");
-	return Response::json($res->json()['Search']);
-
-});
