@@ -2,6 +2,9 @@
   "name": "pendingmovies",
   "dependencies": {
     "jquery": "~2.1.3",
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.10",
+    "angular-ui": "~0.4.0",
+    "angular-ui-select": "~0.9.6"
   }
 }

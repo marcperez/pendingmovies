@@ -20,8 +20,7 @@ Route::resource('movies', 'MoviesController');
 
 Route::get('movies/search/{movie_title}', function($movie_title) {
 	$client = new GuzzleHttp\Client();
-	$req = $client->createRequest('GET', "http://www.omdbapi.com/?s=$movie_title&r=json", ['future' => true]);
-	$client->send($req)->then(function ($response) {
-		dd($response->json());
-	});
+	$res = $client->get("http://www.omdbapi.com/?s=$movie_title&r=json");
+	return Response::json($res->json()['Search']);
+
 });

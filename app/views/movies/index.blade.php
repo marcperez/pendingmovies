@@ -4,7 +4,7 @@
 @section('content')
 
 
-<div class="container movies-list">
+<div class="container movies-list" ng-controller="MoviesCtrl">
 	<div class="row">
 		<div class="col-sm-12">
 			<form action="">

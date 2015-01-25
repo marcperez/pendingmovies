@@ -16,8 +16,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-
+  <body ng-app="PendingMoviesApp">
 
     <nav class="navbar navbar-inverse">
       <div class="container">
@@ -45,6 +44,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/lib.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
   </body>
 </html>

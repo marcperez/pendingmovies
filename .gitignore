@@ -1,4 +1,5 @@
 /public/js/lib
+/public/js/lib.js
 /node_modules
 
 /bootstrap/compiled.php
