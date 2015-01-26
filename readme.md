@@ -2,6 +2,8 @@
 
 Simple movie listing application.
 
+![Pending Movies](http://i.imgur.com/CFXB67Y.png)
+
 ## To-Do
 
 * Users management and roles
