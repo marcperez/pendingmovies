@@ -38,7 +38,8 @@ class MoviesController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Movie::create($data);
+		$repo = App::make('MovieRepository');
+		$movie = $repo->create(Input::all());
 
 		return Redirect::route('movies.index');
 	}

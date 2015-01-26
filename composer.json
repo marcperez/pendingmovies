@@ -7,7 +7,9 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"vlucas/phpdotenv": "~1.1",
-		"guzzlehttp/guzzle": "~5.1"
+		"guzzlehttp/guzzle": "~5.1",
+		"codesleeve/laravel-stapler": "~1.0",
+		"intervention/image": "~2.0"
 	},
 	"require-dev": {
 		"way/generators": "~2.0"
@@ -17,6 +19,7 @@
 			"app/commands",
 			"app/controllers",
 			"app/models",
+			"app/repositories",
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"

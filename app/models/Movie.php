@@ -1,6 +1,11 @@
 <?php
 
-class Movie extends \Eloquent {
+use Codesleeve\Stapler\ORM\StaplerableInterface;
+use Codesleeve\Stapler\ORM\EloquentTrait;
+use Intervention\Image\ImageManager;
+
+class Movie extends \Eloquent implements StaplerableInterface {
+	use EloquentTrait;
 
 	// Add your validation rules here
 	public static $rules = [
@@ -8,31 +13,18 @@ class Movie extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = ['title', 'plot', 'genre', 'released_on', 'imdbRating'];
+	protected $fillable = ['title', 'plot', 'genre', 'released_on', 'imdbRating', 'poster'];
 
+    public function __construct(array $attributes = array()) {
+        $this->hasAttachedFile('poster', [
+            'styles' => [
+            'medium' => '500x300',
+            'thumb' => '200x100'
+            ],
+            'url' => '/uploads/:attachment/:id//:style/:filename'
+        ]);
 
-	public static function boot()
-    {
-        parent::boot();
-
-    	Movie::creating(function($movie)
-		{
-			$client = new GuzzleHttp\Client();
-			$res = $client->get("http://www.omdbapi.com/?t=$movie->title&y=&plot=short&r=json");
-			$data = $res->json();
-
-			if($data['Response'] == 'True') {
-				$movie->plot = $data['Plot'];
-				$movie->released_on = $data['Year'];
-				$movie->genre = $data['Genre'];
-				$movie->imdbRating = $data['imdbRating'];
-
-				return true;
-			}
-
-			return false;
-		    //$movie_data = MovieApi::getInfoByTitle($movie->title);
-		});
+        parent::__construct($attributes);
     }
 
 }

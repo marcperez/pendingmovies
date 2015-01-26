@@ -2,6 +2,8 @@
 /public/js/lib.js
 /node_modules
 
+/public/uploads
+
 /bootstrap/compiled.php
 /vendor
 composer.phar

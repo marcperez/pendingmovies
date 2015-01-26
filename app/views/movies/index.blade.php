@@ -24,7 +24,7 @@
 		@foreach($movies as $movie)
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
-		      <img src="http://cdn.collider.com/wp-content/uploads/boyhood-teaser-poster.jpg" alt="..." class="img-responsive">
+		      <img src="{{ $movie->poster->url('medium') }}" alt="..." class="img-responsive">
 		      <div class="caption">
 		        <h3>{{$movie->title}}</h3>
 		        <p>{{$movie->plot}}</p>
